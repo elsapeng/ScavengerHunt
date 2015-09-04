@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		32B68ECB1B9906A700A3F491 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B68ECA1B9906A700A3F491 /* AppDelegate.swift */; };
-		32B68ECD1B9906A700A3F491 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B68ECC1B9906A700A3F491 /* ViewController.swift */; };
+		32B68ECD1B9906A700A3F491 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B68ECC1B9906A700A3F491 /* AddViewController.swift */; };
 		32B68ED01B9906A700A3F491 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B68ECE1B9906A700A3F491 /* Main.storyboard */; };
 		32B68ED21B9906A700A3F491 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32B68ED11B9906A700A3F491 /* Assets.xcassets */; };
 		32B68ED51B9906A700A3F491 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B68ED31B9906A700A3F491 /* LaunchScreen.storyboard */; };
 		32B68EE01B9906A700A3F491 /* ScavengerHuntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B68EDF1B9906A700A3F491 /* ScavengerHuntTests.swift */; };
 		32B68EEB1B9906A700A3F491 /* ScavengerHuntUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B68EEA1B9906A700A3F491 /* ScavengerHuntUITests.swift */; };
+		32B68EF91B99232300A3F491 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B68EF81B99232200A3F491 /* ListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		32B68EFB1B993CE700A3F491 /* ScavengerHuntItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B68EFA1B993CE700A3F491 /* ScavengerHuntItem.swift */; settings = {ASSET_TAGS = (); }; };
+		32B68EFD1B99511B00A3F491 /* ItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B68EFC1B99511B00A3F491 /* ItemsManager.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		32B68EC71B9906A700A3F491 /* ScavengerHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScavengerHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B68ECA1B9906A700A3F491 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		32B68ECC1B9906A700A3F491 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		32B68ECC1B9906A700A3F491 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		32B68ECF1B9906A700A3F491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		32B68ED11B9906A700A3F491 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32B68ED41B9906A700A3F491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		32B68EE61B9906A700A3F491 /* ScavengerHuntUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScavengerHuntUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B68EEA1B9906A700A3F491 /* ScavengerHuntUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScavengerHuntUITests.swift; sourceTree = "<group>"; };
 		32B68EEC1B9906A700A3F491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32B68EF81B99232200A3F491 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		32B68EFA1B993CE700A3F491 /* ScavengerHuntItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScavengerHuntItem.swift; sourceTree = "<group>"; };
+		32B68EFC1B99511B00A3F491 /* ItemsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				32B68ECA1B9906A700A3F491 /* AppDelegate.swift */,
-				32B68ECC1B9906A700A3F491 /* ViewController.swift */,
+				32B68ECC1B9906A700A3F491 /* AddViewController.swift */,
+				32B68EFC1B99511B00A3F491 /* ItemsManager.swift */,
 				32B68ECE1B9906A700A3F491 /* Main.storyboard */,
+				32B68EFA1B993CE700A3F491 /* ScavengerHuntItem.swift */,
+				32B68EF81B99232200A3F491 /* ListViewController.swift */,
 				32B68ED11B9906A700A3F491 /* Assets.xcassets */,
 				32B68ED31B9906A700A3F491 /* LaunchScreen.storyboard */,
 				32B68ED61B9906A700A3F491 /* Info.plist */,
@@ -255,8 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32B68ECD1B9906A700A3F491 /* ViewController.swift in Sources */,
+				32B68ECD1B9906A700A3F491 /* AddViewController.swift in Sources */,
 				32B68ECB1B9906A700A3F491 /* AppDelegate.swift in Sources */,
+				32B68EFB1B993CE700A3F491 /* ScavengerHuntItem.swift in Sources */,
+				32B68EF91B99232300A3F491 /* ListViewController.swift in Sources */,
+				32B68EFD1B99511B00A3F491 /* ItemsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
