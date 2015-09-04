@@ -9,9 +9,33 @@
 import Foundation
 import UIKit
 
-class ListViewController: UITableViewController {
+class ListViewController: UITableViewController, UIImagePickerControllerDelegate,
+UINavigationControllerDelegate {
     
     let myManager = ItemsManager()
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let imagePicker = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            imagePicker.sourceType = .Camera
+        } else {
+            imagePicker.sourceType = .PhotoLibrary
+        }
+        
+        imagePicker.delegate = self
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let selectedItem = myManager.items[indexPath.row]
+            let photo = info[UIImagePickerControllerOriginalImage] as! UIImage
+            selectedItem.photo = photo
+            dismissViewControllerAnimated(true, completion: {
+                self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            })
+        }
+    }
     
     var itemsList = [ScavengerHuntItem(name: "Cat"), ScavengerHuntItem(name: "Bird"), ScavengerHuntItem(name: "Brick"), ScavengerHuntItem(name: "iPhone"), ScavengerHuntItem(name: "🌴")]
     
@@ -23,6 +47,15 @@ class ListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ListViewCell", forIndexPath: indexPath)
         
         let item = myManager.items[indexPath.row]
+        
+        if (item.isCompleted) {
+            cell.accessoryType = .Checkmark
+            cell.imageView?.image = item.photo
+        } else {
+            cell.accessoryType = .None
+            cell.imageView?.image = nil
+        }
+        
         cell.textLabel?.text = item.name
         
         return cell
